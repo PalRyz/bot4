@@ -1,0 +1,39 @@
+{
+  "name": "nopalryz-bot",
+  "version": "1.0.0",
+  "description": "NOPALRYZ.exe - modern WhatsApp bot with pairing code / QR login, safe admin mode and modular commands",
+  "main": "index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "start:pairing": "LOGIN_METHOD=pairing node index.js",
+    "start:qr": "LOGIN_METHOD=qr node index.js",
+    "start:restart": "while true; do node index.js; echo 'Restarting in 3s...'; sleep 3; done",
+    "dev": "node index.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "baileys",
+    "bot",
+    "termux",
+    "pairing-code"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@vitalets/google-translate-api": "^9.2.1",
+    "@whiskeysockets/baileys": "^6.7.24",
+    "axios": "^1.20.0",
+    "dotenv": "^17.4.2",
+    "fluent-ffmpeg": "^2.1.3",
+    "jsqr": "^1.4.0",
+    "mathjs": "^15.2.0",
+    "pino": "^10.3.1",
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0",
+    "sharp": "^0.35.4"
+  }
+}
